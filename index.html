@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dheeraj — Portfolio</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{background:linear-gradient(180deg,#f7fbff,#ffffff);color:#111;}
+    header{background:#0b66ff;color:#fff;padding:28px 16px;text-align:center;}
+    header h1{font-size:2rem;letter-spacing:0.5px;}
+    nav ul{display:flex;gap:18px;justify-content:center;list-style:none;margin-top:12px;}
+    nav a{color:#eaf2ff;text-decoration:none;font-weight:600;}
+    .hero{padding:60px 6%;text-align:center;position:relative;overflow:hidden;}
+    .hero .card{display:inline-block;padding:28px;border-radius:18px;background:rgba(255,255,255,0.9);box-shadow:0 10px 30px rgba(11,102,255,0.08);max-width:920px;}
+    .hero h2{color:#0b66ff;font-size:1.8rem;margin-bottom:8px;}
+    .hero p{color:#334;opacity:0.9;}
+    .blob{position:absolute;right:-120px;top:-80px;width:350px;height:350px;border-radius:50%;background:linear-gradient(45deg,#60a5fa,#7c3aed);filter:blur(60px);animation:float 7s ease-in-out infinite;opacity:0.7;}
+    @keyframes float{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-24px) rotate(10deg)}100%{transform:translateY(0) rotate(0)}}
+    section{padding:48px 6%;}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;}
+    .card-light{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.06);}
+    .profile-img{width:120px;height:120px;border-radius:12px;object-fit:cover;border:6px solid #fff;box-shadow:0 6px 18px rgba(11,102,255,0.12);}
+    .socials{display:flex;gap:12px;margin-top:12px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:600;}
+    .btn-whatsapp{background:#25D366;color:#fff;}
+    .btn-insta{background:linear-gradient(45deg,#f58529,#dd2a7b,#833ab4);color:#fff;}
+    .btn-resume{background:#0b66ff;color:#fff;}
+    form{display:flex;flex-direction:column;gap:12px;}
+    input[type=text],input[type=password],select{padding:12px;border-radius:8px;border:1px solid #e6eefc;}
+    label{font-weight:600;font-size:0.95rem;}
+    footer{text-align:center;padding:20px;background:#0b66ff;color:#fff;margin-top:30px;}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.blob{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dheeraj Prajapat</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="card">
+        <h2>Hello, I'm Dheeraj 👋</h2>
+        <p>Web developer — HTML, CSS, JavaScript. Welcome to my online portfolio.</p>
+      </div>
+    </section>
+
+    <section id="about" class="card-light">
+      <div class="grid">
+        <div>
+          <h3>About Me</h3>
+          <p class="small">I'm a self-taught web developer focusing on small projects and learning new tools every day. I build responsive websites and simple web apps.</p>
+
+          <h4 style="margin-top:18px">Skills</h4>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <span class="btn" style="background:#eef6ff;color:#0b66ff">HTML</span>
+            <span class="btn" style="background:#eef6ff;color:#0b66ff">CSS</span>
+            <span class="btn" style="background:#eef6ff;color:#0b66ff">JavaScript</span>
+            <span class="btn" style="background:#eef6ff;color:#0b66ff">React</span>
+          </div>
+        </div>
+
+        <aside class="card-light" style="text-align:center">
+          <img src="https://placehold.co/300x300/png?text=Your+Photo" alt="Profile" class="profile-img" />
+          <div style="margin-top:12px">Dheeraj Prajapat</div>
+          <div class="socials">
+            <a class="btn btn-insta" href="https://instagram.com/your_instagram" target="_blank">Instagram</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/9111514980" target="_blank">WhatsApp</a>
+          </div>
+          <div style="margin-top:12px">
+            <a class="btn btn-resume" href="#" download>Download Resume</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="card-light" style="margin-top:18px">
+      <h3>Projects</h3>
+      <ul>
+        <li>Personal Portfolio (this site)</li>
+        <li>Calculator App</li>
+        <li>To-Do App (localStorage)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card-light" style="margin-top:18px">
+      <h3>Registration / Contact Form</h3>
+      <p class="small">Fill this form — submission will be saved into your Google Drive folder named <strong>information</strong>.</p>
+
+      <!-- CORS-free HTML form POST -->
+      <form action="https://script.google.com/macros/s/AKfycbwhFD3ymYCP4whztPZ482q1cr6ncncnbiTTFxWZA5ISTAucuD3YfpFLbBpOyfirdYezKQ/exec" method="post" target="_blank">
+        <label>Username</label>
+        <input type="text" name="username" required />
+
+        <label>Password</label>
+        <input type="password" name="password" required />
+
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>Email (optional)</label>
+        <input type="text" name="email" />
+
+        <label>Phone (optional)</label>
+        <input type="text" name="phone" value="9111514980" />
+
+        <button type="submit" class="btn btn-resume">Submit</button>
+      </form>
+
+      <p class="small" style="margin-top:8px;">Form will open in a new tab and submission will be saved automatically in your Google Drive folder.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Dheeraj Prajapat
+  </footer>
+</body>
+</html>
